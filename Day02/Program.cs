@@ -5,8 +5,6 @@ public class Program
     public const string Down = "down";
     public const string Up = "up";
 
-
-
     public static void Main()
     {
         var input = File.ReadAllText("./input.txt");
@@ -64,17 +62,7 @@ public class Program
     }
 }
 
-public class Command
-{
-    public Command(string direction, int howMuch)
-    {
-        Direction = direction;
-        HowMuch = howMuch;
-    }
-
-    public string Direction { get; }
-    public int HowMuch { get; }
-}
+public record struct Command(string Direction, int HowMuch);
 
 
 
